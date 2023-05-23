@@ -12,6 +12,10 @@ h1 {
     font-family: 'Sacramento', cursive;
 }
 
+.navbar {
+    position: fixed;
+    z-index: 2;
+}
 
 .navbar-nav {
     display: flex;
@@ -33,10 +37,16 @@ h1 {
 
 .container {
     text-align: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
 }
 
 .top-text {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
     color: #617A55;
 }
 
@@ -47,13 +57,14 @@ h1 {
 .left-cloud {
     position: absolute;
     left: 5%;
-    top: 60%;
+    top: 70%;
 }
 
 .right-cloud {
     position: absolute;
     right: 5%;
-    top: 20%;
+    top: 12%;
+    z-index: 1;
 }
 
 .parent {
@@ -70,4 +81,34 @@ h1 {
 .top {
     position: relative;
     background: #FFF8D6;
+}
+
+.heading {
+    font-size: 6rem;
+}
+
+@media screen and (max-width: 768px) {
+    .heading {
+        font-size: 4rem;
+    }
+    .top-text {
+        font-size: 0.9rem;
+    }
+    .container {
+        top: 10%;
+    }
+    .navbar-nav {
+        font-size: 1rem;
+    }
+    .right-cloud {
+        top: 10%;
+        width: 20%;
+    }
+    .left-cloud {
+        width: 20%;
+        top: 80%;
+    }
+    .top-img {
+        width: 88%;
+    }
 }
